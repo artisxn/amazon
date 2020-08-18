@@ -1,0 +1,50 @@
+{
+    "name": "codicastudio/amazon",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/honeypot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codicastudio.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^6.5",
+        "spatie/array-to-xml": "^2.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "codicastudio\\LaravelAmazonMWS\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "codicastudio\\LaravelAmazonMWS\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "^4.0",
+        "dms/phpunit-arraysubset-asserts": "^0.2.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\LaravelAmazonMWS\\AmazonMWSServiceProvider"
+            ],
+            "aliases": {
+                "AmazonMWS": "codicastudio\\LaravelAmazonMWS\\Facades\\AmazonMWS"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
